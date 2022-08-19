@@ -1,0 +1,6 @@
+div ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  line-height: 25px;
+}
