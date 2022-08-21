@@ -15,11 +15,11 @@ export default function App() {
             <Search />
           </div>
         </div>
+      </div>
       <div>
         <button>
           <Footer />
         </button>
-      </div>
       </div>
     </div>
   );
