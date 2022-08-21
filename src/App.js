@@ -16,9 +16,11 @@ export default function App() {
           </div>
         </div>
       </div>
-      <button>
-        <Footer />
-      </button>
+      <div>
+        <button>
+          <Footer />
+        </button>
+      </div>
     </div>
   );
 }
