@@ -16,10 +16,9 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div>
-
-      <Footer />
-      </div>
+      <button>
+        <Footer />
+      </button>
     </div>
   );
 }
