@@ -8,20 +8,26 @@ export default function Search() {
       <ul>
         <div>
           <li id="city">Paris</li>
-          <li id="time">15:29</li>
-          <li id="description"> Foggy</li>
+          <li id="time">Monday 15:29</li>
+          <li id="description"> Mostly Cloudy</li>
         </div>
         <div className="clearfix weather-temperature">
-          <img src="" alt=" Weather icon" />
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="Weather icon"
+          />
           <strong id="temperature">20</strong>
           <span className="units">°C</span>
         </div>
         <div>
           <li>
-            Humidity:20 <span id="humidity"></span>%
+            🌧️ Precipitation:<span id="precipitation">10</span>%
           </li>
           <li>
-            Wind:5 <span id="wind"></span>km/h
+            💧 Humidity:<span id="humidity">20</span>%
+          </li>
+          <li>
+            🌬️ Wind:<span id="wind">5</span>km/h
           </li>
         </div>
       </ul>

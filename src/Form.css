@@ -3,3 +3,17 @@ form {
   padding: 5px 4px;
   text-align: center;
 }
+
+.btn {
+  border-radius: 6px;
+  border-width: 2px;
+  border-color: #73ad21;
+  border-style: solid;
+  transition: 0.1s;
+  transition: 200ms;
+  margin: 10px auto;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}

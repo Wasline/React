@@ -2,17 +2,8 @@ body {
   font-family: "Courier New", Courier, monospace;
   margin: 0 auto;
 }
-h1 {
-  padding: 10px;
-  text-align: center;
-}
 
-div span {
-  font-size: 35px;
-  font-weight: bolder;
-  margin: 10px;
-}
-
+/*
 .fahrenheit {
   text-decoration: none;
 }
@@ -34,7 +25,7 @@ h3 {
   text-align: center;
   right: 270px;
 }
-
+*/
 .card {
   background: linear-gradient(
     181.2deg,
@@ -47,7 +38,3 @@ h3 {
   padding: 0 auto;
 }
 
-.small {
-  font-weight: bolder;
-  margin: 2px 5px;
-}

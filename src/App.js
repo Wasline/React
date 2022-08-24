@@ -7,7 +7,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div id="root">
         <div className="card" id="first">
           <div className="card-body">
@@ -16,9 +16,9 @@ export default function App() {
           </div>
         </div>
       </div>
-      <buttom>
+      <small>
         <Footer />
-      </buttom>
+      </small>
     </div>
   );
 }
