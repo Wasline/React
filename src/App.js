@@ -1,7 +1,7 @@
 import React from "react";
-import Form from "./Form";
-import Search from "./Search";
+import Weather from "./Weather";
 import Footer from "./Footer";
+
 
 import "./App.css";
 
@@ -11,8 +11,8 @@ export default function App() {
       <div id="root">
         <div className="card" id="first">
           <div className="card-body">
-            <Form />
-            <Search />
+            <Weather defaultCity="San Fransico" />
+
           </div>
         </div>
       </div>
