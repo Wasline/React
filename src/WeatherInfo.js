@@ -8,11 +8,11 @@ export default function WeatherInfo(props) {
       <div classeName="Search">
         <ul>
           <div>
-            <li id="city">{props.data.city}</li>
-            <li id="date">
+            <li>{props.data.city}</li>
+            <li>
               <FormattedDate date={props.data.date} />
             </li>
-            <li id="description" className="text-capitalize">
+            <li className="text-capitalize">
               {props.data.description}
             </li>
           </div>
@@ -22,13 +22,13 @@ export default function WeatherInfo(props) {
           <div>
             <li>
               🌧️ Precipitation:
-              <span id="precipitation">{props.data.precipitation}</span>%
+              <span>{props.data.precipitation}</span>%
             </li>
             <li>
-              💧 Humidity:<span id="humidity">{props.data.humidity}</span>%
+              💧 Humidity:<span>{props.data.humidity}</span>%
             </li>
             <li>
-              🌬️ Wind:<span id="wind">{props.data.wind}</span>km/h
+              🌬️ Wind:<span>{props.data.wind}</span>km/h
             </li>
           </div>
         </ul>
