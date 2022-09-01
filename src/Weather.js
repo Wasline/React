@@ -12,6 +12,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -21,7 +22,7 @@ export default function Weather(props) {
       city: response.data.name,
     });
   }
-  
+
   function search() {
     const apiKey = "d5eb4363f756421ee7fc09852c61e35c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -37,23 +38,21 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-
-  if (weatherResult.ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form id="city-form" className="mb-4" onSubmit={handleSubmit}>
+        <form className="mb-4" onSubmit={handleSubmit}>
           <input
             type="search-button"
             placeholder="Where to ?"
             autocomplete="off"
             autofocus="on"
-            id="city-input"
+            className="form-control"
             onChange={handleUpdateCity}
           />{" "}
           <button
             type="button"
             className="btn btn-outline-primary"
-            id="searchButton"
             title="Search Icon "
           >
             🔎
@@ -61,7 +60,7 @@ export default function Weather(props) {
           <button
             type="button"
             className="btn btn-outline-primary"
-            id="geo-btn"
+            title="Pin Icon "
           >
             <img
               src="images/PinIcon.png"
@@ -72,7 +71,7 @@ export default function Weather(props) {
             ></img>
           </button>
         </form>
-        <WeatherInfo />
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
