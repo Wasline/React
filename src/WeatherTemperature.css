@@ -1,0 +1,13 @@
+.weather-icon {
+  margin-right: 5px;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.WeatherTemperature {
+  line-height: 1;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+}
