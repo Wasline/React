@@ -4,7 +4,7 @@ import "./WeatherTemperature.css";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");
-  
+
   function showFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");
@@ -25,7 +25,9 @@ export default function WeatherTemperature(props) {
           size="15"
         />
         <div className="col-6 d-flex">
-          <span className="temperature">{Math.round(props.celsius)}</span>
+          <span className="temperature">
+            {Math.round(props.data.temperature)}
+          </span>
           <span className="unit">
             °C |{" "}
             <a
@@ -40,7 +42,7 @@ export default function WeatherTemperature(props) {
       </div>
     );
   } else {
-    let fahrenheit = (props.celsius * 9) / 5 + 32;
+    let fahrenheit = (props.data.temperature * 9) / 5 + 32;
     return (
       <div className="clearfix WeatherTemperature">
         <img
