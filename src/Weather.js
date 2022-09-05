@@ -12,12 +12,12 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      coordinates: response.data.coord,
+      coords: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: `./images/weatherIcons/${response.data.weather[0].icon}.gif`,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
@@ -37,6 +37,16 @@ export default function Weather(props) {
   function handleUpdateCity(event) {
     setCity(event.target.value);
   }
+  
+  function getCurrentPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
+  function showPosition(position) {
+    const currentCoords = `lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
+    search(currentCoords);
+  }
 
   if (weatherData.ready) {
     return (
@@ -45,22 +55,23 @@ export default function Weather(props) {
           <input
             type="search-button"
             placeholder="Where to ?"
-            autocomplete="off"
-            autofocus="on"
-            className="form-control"
+            autoComplete="off"
+            autoFocus="off"
+            className="form-control-sm"
             onChange={handleUpdateCity}
           />{" "}
           <button
-            type="button"
+            type="button-submit"
             className="btn btn-outline-primary"
             title="Search Icon "
           >
             🔎
           </button>{" "}
           <button
-            type="button"
+            type="button-submit"
             className="btn btn-outline-primary"
             title="Pin Icon "
+            onClick={getCurrentPosition}
           >
             <img
               src="images/PinIcon.png"
