@@ -5,7 +5,7 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div classeName="Search m-5">
+      <div className="Search m-5">
         <ul>
           <div>
             <li>{props.data.city}</li>
@@ -20,6 +20,7 @@ export default function WeatherInfo(props) {
           </div>
 
           <div>
+  
             <li>
               💧 Humidity:<span>{props.data.humidity}</span>%
             </li>
@@ -29,6 +30,8 @@ export default function WeatherInfo(props) {
             </li>
           </div>
         </ul>
+        <br />
+        <br />
       </div>
     </div>
   );
