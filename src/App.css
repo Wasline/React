@@ -1,31 +1,8 @@
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family:monospace;
   margin: 0 auto;
 }
 
-/*
-.fahrenheit {
-  text-decoration: none;
-}
-
-.celsius {
-  text-decoration: none;
-}
-h3 {
-  text-align: center;
-  font-family: monospace;
-}
-
-.day {
-  text-align: center;
-}
-
-.row {
-  position: absolute;
-  text-align: center;
-  right: 270px;
-}
-*/
 .card {
   background: linear-gradient(
     181.2deg,
@@ -36,4 +13,8 @@ h3 {
   width: 60%;
   border: 3px solid #73ad21;
   padding: 0 auto;
+}
+
+.card-body{
+ margin: 10px 25px;
 }
