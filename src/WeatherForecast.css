@@ -1,7 +1,18 @@
-.WeatherForecast{
-    text-align:center;
-}
 .WeatherForecast-temperature-min{
-    opacity:0.6;
+    opacity:0.5;
     margin-left:5px;
+}
+
+.WeatherForecast {
+  border-radius: 6px;
+  border-width: 2px;
+  text-align:center;
+  border-color: #73ad21;
+  border-style: solid;
+  transition: all 0.1s ease-in-out;
+  margin: 10px auto;
+}
+
+.WeatherForecast:hover {
+  transform: scale(1.1);
 }
