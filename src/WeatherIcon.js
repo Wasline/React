@@ -1,35 +1,40 @@
 import React from "react";
-import WeatherIcons from "./icons/WeatherIcons";
+import clearDay from "./images/01d.svg";
+import clearNight from "./images/01n.svg";
+import overcastDay from "./images/02d.svg";
+import overcastNight from "./images/02n.svg";
+import cloudy from "./images/03d.svg";
+import overcast from "./images/04d.svg";
+import rain from "./images/09d.svg";
+import thunderstorms from "./images/11n.svg";
+import snow from "./images/13d.svg";
+import mist from "./images/50n.svg";
 
 export default function WeatherIcon(props) {
     const codeMapping = {
-      "01d": "CLEAR_DAY",
-      "01n": "CLEAR_NIGHT",
-      "02d": "PARTLY_CLOUDY_DAY",
-      "02n": "PARTLY_CLOUDY_NIGHT",
-      "03d": "PARTLY_CLOUDY_DAY",
-      "02n": "PARTLY_CLOUDY_NIGHT",
-      "04d": "CLOUDY",
-      "04n": "CLOUDY",
-      "09d": "RAIN",
-      "09n": "RAIN",
-      "10d": "RAIN",
-      "10n": "RAIN",
-      "11d": "RAIN",
-      "11n": "RAIN",
-      "13d": "SNOW_DAY",
-      "13n": "SNOW_NIGHT",
-      "50d": "FOG_DAY",
-      "50n": "FOG_NIGHT",
+      "01d": clearDay,
+      "01n": clearNight,
+      "02d": overcastDay,
+      "02n": overcastNight,
+      "03d": cloudy,
+      "03n": overcast,
+      "04n": overcast,
+      "09d": rain,
+      "09n": rain,
+      "10d": rain,
+      "10n": rain,
+      "11d": thunderstorms,
+      "11n": thunderstorms,
+      "13d": snow,
+      "13n": snow,
+      "50d": mist,
+      "50n": mist,
     };
 
-    return(
-      <div>
-        <img src={WeatherIcons}
-        icon = {codeMapping[props.code]}
-        size = {props.size}
-        animate={true}
-        />
-        </div>
+    return (
+    <img src={codeMapping[props.code]}
+    alt="weather icon"
+    size={props.size}
+    />
     );
 }
