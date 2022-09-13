@@ -6,8 +6,8 @@
 }
 
 .WeatherTemperature {
-  line-height: 1;
-  font-size: 25px;
-  font-weight: bold;
+  line-height: 2;
+  font-size: 40px;
+  font-weight: lighter;
   display: flex;
 }

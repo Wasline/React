@@ -9,7 +9,6 @@ form {
   border-width: 2px;
   border-color: #73ad21;
   border-style: solid;
-  transition: 0.1s;
   transition: 200ms;
   margin: 10px auto;
 }
@@ -23,10 +22,5 @@ div ul {
   justify-content: space-between;
   list-style: none;
   line-height: 25px;
-}
-
-.units {
-  font-size: 35px;
-  font-weight: bolder;
-  margin: 10px;
+  font-size: 18px;
 }

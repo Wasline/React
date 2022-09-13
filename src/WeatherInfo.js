@@ -14,11 +14,9 @@ export default function WeatherInfo(props) {
             </li>
             <li className="text-capitalize">{props.data.description}</li>
           </div>
-
           <div>
             <WeatherTemperature data={props.data} />
           </div>
-
           <div>
   
             <li>
@@ -30,8 +28,7 @@ export default function WeatherInfo(props) {
             </li>
           </div>
         </ul>
-        <br />
-        <br />
+        <hr />
       </div>
     </div>
   );
